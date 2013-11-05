@@ -110,12 +110,6 @@ class Matriz
 	# Metodo para hallar la traspuesta de una matriz
 	
 	
-	# Metodo para hallar la inversa de una matriz
-	
-	
-	# Metodo para hallar el determinante de una matriz --> ¡OJO!
-	
-	
 	# Metodo para convertir la matriz en un vector
 	
 end

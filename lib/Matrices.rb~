@@ -98,12 +98,12 @@ class Matriz
 	def *(other)
 		elemento = Array.new(0)
 		for i in 0...filas do
-		    fila = Array.new(0)
-		    for j in 0...colum do
-			fila << pos[i][j]*other
-		    end
-		    elemento << fila
+			fila = Array.new(0)
+			for j in 0...colum do
+				fila << pos[i][j]*other
 			end
+			elemento << fila
+		end
 		Matriz.new(@nfil, @ncol, elemento)
 	end
 	

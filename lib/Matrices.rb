@@ -95,7 +95,17 @@ class Matriz
 	end
 	
 	# Metodo para multiplicar una matriz por un escalar
-	
+	def *(other)
+		elemento = Array.new(0)
+		for i in 0...filas do
+			fila = Array.new(0)
+			for j in 0...colum do
+				fila << pos[i][j]*other
+			end
+			elemento << fila
+		end
+		Matriz.new(@nfil, @ncol, elemento)
+	end
 	
 	# Metodo para hallar la traspuesta de una matriz
 	

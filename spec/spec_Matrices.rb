@@ -45,5 +45,14 @@ describe Matriz do
 		end
 	end
 	
+	# Comprobacion de la multiplicacion
+	describe "Comprobamos la multiplicacion" do
+		it " Multiplicacion" do
+			@aux = Matriz.new(2,2,[[69,78],[42,58]])
+			@aux2 = m3*m4
+			@aux2.to_s.should eq(@aux.to_s)
+		end
+	end
+	
 	
 end

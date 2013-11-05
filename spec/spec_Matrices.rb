@@ -24,17 +24,24 @@ describe Matriz do
 		it "" do
 			@m1.to_s.should eq("1\t2\t\n3\t4\t\n")
 		end
+=begin
+		it "Acceso al elemento [0][0]" do
+			@m1.pos[0][0].shoul ed(1)
+		end
+=end
 	end
 	
 	# Comprobacion de las operaciones de suma y resta de matrices
 	describe "Comprobamos la suma y resta de matrices" do
 		it " - Suma" do
 			@aux = Matriz.new(2,2,[[6,5],[5,7]])
-			@m1+@m2.should eq(@aux)
+			@aux2 = @m1.+@m2
+			@aux2.should eq(aux)
 		end
 		it " - Resta" do
 			
 		end
 	end
 	
-	end
+	
+end

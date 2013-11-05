@@ -8,6 +8,7 @@ class Matriz
 	
 	# 
 	attr_accessor :nfil, :ncol, :pos
+	# attr_reader :nfil, :ncol, :pos
 	
 	# Metodo initilize de la clase
 	def initialize(nfil, ncol, pos)
@@ -29,7 +30,23 @@ class Matriz
 	end
 	
 	# Metodo para sumar dos matrices
-	
+	def +(other)
+		if ((@nfil =! other.nfil) || (@ncol =! other.ncol))
+			puts "No se pueden sumar las matrices"
+		else
+			i = 0
+			j = 0
+			elemento = Array.new
+			for i in 0..@nfil do
+				fila = Array.new
+				for j in 0..@ncol do
+					fila << @elemento[i][j] + other.elemento[i][j]
+				end
+				elemento << fila
+			end
+		end
+		Matriz.new(@nfil, @ncol, elemento)
+	end
 	
 	# Metodo para restar dos matrices
 	
@@ -55,5 +72,6 @@ end
 
 if __FILE__ == $0
 	m1 = Matriz.new(2,2,[[1,2],[3,4]])
-	puts m1
+	m2 = Matriz.new(2,2,[[1,2],[3,4]])
 end
+

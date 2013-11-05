@@ -41,7 +41,7 @@ describe Matriz do
 		it " - Resta\n" do
 			@aux = Matriz.new(2,2,[[4,1],[-1,-1]])
 			@aux2 = @m5-@m1
-			@aux2.should eq(aux)
+			@aux2.to_s.should eq(@aux.to_s)
 		end
 	end
 	

@@ -57,7 +57,21 @@ class Matriz
 	end
 	
 	# Metodo para restar dos matrices
-	
+	def -(other)
+		if ((@nfil != other.nfil) || (@ncol != other.ncol))
+			puts "No se pueden sumar las matrices"
+		else
+			elemento = Array.new(0)
+			for i in 0...filas do
+				fila = Array.new(0)
+				for j in 0...colum do
+					fila << pos[i][j] - other.pos[i][j]
+				end
+				elemento << fila
+			end
+		end
+		Matriz.new(@nfil, @ncol, elemento)
+	end
 	
 	# Metodo para multiplicacion dos matrices
 	

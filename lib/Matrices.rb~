@@ -59,7 +59,7 @@ class Matriz
 	# Metodo para restar dos matrices
 	def -(other)
 		if ((@nfil != other.nfil) || (@ncol != other.ncol))
-			puts "No se pueden restar las matrices"
+			puts "No se pueden sumar las matrices"
 		else
 			elemento = Array.new(0)
 			for i in 0...filas do

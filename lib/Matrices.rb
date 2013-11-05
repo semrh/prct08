@@ -13,7 +13,6 @@ class Matriz
 	# Metodo initilize de la clase
 	def initialize(nfil, ncol, pos)
 		@nfil = nfil
-		puts @nfil
 		@ncol = ncol
 		@pos = Array.new(pos)
 	end
@@ -45,13 +44,13 @@ class Matriz
 		if ((@nfil != other.nfil) || (@ncol != other.ncol))
 			puts "No se pueden sumar las matrices"
 		else
-			puts self.nfil
-			elemento = Array.new(filas, Array.new(colum))
+			elemento = Array.new(0)
 			for i in 0...filas do
-				puts i
+				fila = Array.new(0)
 				for j in 0...colum do
-					elemento[i][j] = @pos[i][j] + other.pos[i][j]
+					fila << pos[i][j] + other.pos[i][j]
 				end
+				elemento << fila
 			end
 		end
 		Matriz.new(@nfil, @ncol, elemento)

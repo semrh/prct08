@@ -10,18 +10,18 @@ describe Matriz do
 	end
 	
 	# Comprobacion de que se crea bien la matriz
-	describe "Comprobamos el numero de... " do
-		it " - Filas para una matriz 3x3" do
+	describe "Comprobamos el numero de...\n" do
+		it " - Filas para una matriz 3x3\n" do
 			@m2.nfil.should eq(3)
 		end
-		it " - Columnas de una matriz 3x3" do
+		it " - Columnas de una matriz 3x3\n" do
 			@m2.ncol.should eq(3)
 		end
 	end
 	
 	# Comprobacion de que se convierte bien la matriz a un string
-	describe "Comprobamos el metodo de conversion a string" do
-		it "" do
+	describe "Comprobamos el metodo de conversion a string\n" do
+		it "\n" do
 			@m1.to_s.should eq("1\t2\t\n3\t4\t\n")
 		end
 =begin
@@ -32,14 +32,16 @@ describe Matriz do
 	end
 	
 	# Comprobacion de las operaciones de suma y resta de matrices
-	describe "Comprobamos la suma y resta de matrices" do
-		it " - Suma" do
+	describe "Comprobamos la suma y resta de matrices\n" do
+		it " - Suma\n" do
 			@aux = Matriz.new(2,2,[[6,5],[5,7]])
-			@aux2 = @m1.+@m2
+			@aux2 = @m1+@m2
 			@aux2.should eq(aux)
 		end
-		it " - Resta" do
-			
+		it " - Resta\n" do
+			@aux = Matriz.new(2,2,[[4,1],[-1,-1]])
+			@aux2 = @m2-@m1
+			@aux2.should eq(aux)
 		end
 	end
 	

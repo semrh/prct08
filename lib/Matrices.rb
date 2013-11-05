@@ -108,6 +108,17 @@ class Matriz
 	end
 	
 	# Metodo para hallar la traspuesta de una matriz
+	def trasponer
+		elemento = Array.new(0)
+		for i in 0...colum do
+			fila = Array.new(0)
+			for j in 0...filas do
+				fila << pos[j][i]
+			end
+			elemento << fila
+		end
+		Matriz.new(@ncol, @nfil, elemento)
+	end
 	
 	
 	# Metodo para convertir la matriz en un vector

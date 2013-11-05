@@ -7,14 +7,25 @@
 class Matriz
 	
 	# 
-	attr_accessor :nfil, :ncol, :pos
-	# attr_reader :nfil, :ncol, :pos
+	#attr_accessor :nfil, :ncol, :pos
+	attr_reader :nfil, :ncol, :pos
 	
 	# Metodo initilize de la clase
 	def initialize(nfil, ncol, pos)
 		@nfil = nfil
+		puts @nfil
 		@ncol = ncol
 		@pos = Array.new(pos)
+	end
+	
+	# Getter de nfil
+	def filas
+		@nfil
+	end
+	
+	# Getter de ncol
+	def colum
+		@ncol
 	end
 	
 	# Metodo para convertir la matriz a string
@@ -31,18 +42,16 @@ class Matriz
 	
 	# Metodo para sumar dos matrices
 	def +(other)
-		if ((@nfil =! other.nfil) || (@ncol =! other.ncol))
+		if ((@nfil != other.nfil) || (@ncol != other.ncol))
 			puts "No se pueden sumar las matrices"
 		else
-			i = 0
-			j = 0
-			elemento = Array.new
-			for i in 0..@nfil do
-				fila = Array.new
-				for j in 0..@ncol do
-					fila << @elemento[i][j] + other.elemento[i][j]
+			puts self.nfil
+			elemento = Array.new(filas, Array.new(colum))
+			for i in 0...filas do
+				puts i
+				for j in 0...colum do
+					elemento[i][j] = @pos[i][j] + other.pos[i][j]
 				end
-				elemento << fila
 			end
 		end
 		Matriz.new(@nfil, @ncol, elemento)
@@ -73,5 +82,6 @@ end
 if __FILE__ == $0
 	m1 = Matriz.new(2,2,[[1,2],[3,4]])
 	m2 = Matriz.new(2,2,[[1,2],[3,4]])
+	puts m1+m2
 end
 

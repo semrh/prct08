@@ -35,12 +35,12 @@ describe Matriz do
 	describe "Comprobamos la suma y resta de matrices\n" do
 		it " - Suma\n" do
 			@aux = Matriz.new(2,2,[[6,5],[5,7]])
-			@aux2 = @m1+@m2
-			@aux2.should eq(aux)
+			@aux2 = @m1+@m5
+			@aux2.to_s.should eq(@aux.to_s)
 		end
 		it " - Resta\n" do
 			@aux = Matriz.new(2,2,[[4,1],[-1,-1]])
-			@aux2 = @m2-@m1
+			@aux2 = @m5-@m1
 			@aux2.should eq(aux)
 		end
 	end

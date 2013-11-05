@@ -5,7 +5,8 @@
 #####################
 
 class Matriz
-	#
+	
+	# 
 	attr_accessor :nfil, :ncol, :pos
 	
 	# Metodo initilize de la clase

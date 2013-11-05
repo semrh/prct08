@@ -1,14 +1,21 @@
+#! /usr/bin/ruby
+
+#####################
+#   PRACTICA 8      #
+#####################
+
 class Matriz
+	#
 	attr_accessor :nfil, :ncol, :pos
 	
+	# Metodo initilize de la clase
 	def initialize(nfil, ncol, pos)
 		@nfil = nfil
 		@ncol = ncol
 		@pos = Array.new(pos)
 	end
 	
-	
-
+	# Metodo para convertir la matriz a string
 	def to_s
 		aux = ""
 		@nfil.times do |i|
@@ -19,6 +26,29 @@ class Matriz
 		end
 		aux
 	end
+	
+	# Metodo para sumar dos matrices
+	
+	
+	# Metodo para restar dos matrices
+	
+	
+	# Metodo para multiplicacion dos matrices
+	
+	
+	# Metodo para multiplicar una matriz por un escalar
+	
+	
+	# Metodo para hallar la traspuesta de una matriz
+	
+	
+	# Metodo para hallar la inversa de una matriz
+	
+	
+	# Metodo para hallar el determinante de una matriz --> ¡OJO!
+	
+	
+	# Metodo para convertir la matriz en un vector
 	
 end
 

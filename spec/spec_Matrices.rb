@@ -60,10 +60,14 @@ describe Matriz do
 	end
 	
 	# Comprobacion de la traspuesta
-	describe "Comprobamos la funciones trasponer" do
+	describe "Comprobamos la funciones trasponer y vectorizar" do
 		it "Traspuesta de una matriz" do
 			@aux = Matriz.new(3,3,[[1,6,2],[2,5,5],[4,8,3]])
 			@m2.trasponer.to_s.should eq(@aux.to_s)
+		end
+		it "Comprovamos la funcion vectorizar" do
+			@aux = Array.new([1,2,4,6,5,8,2,5,3])
+			@m2.vectorizar.should eq(@aux)
 		end
 	end
 	

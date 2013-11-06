@@ -1,0 +1,3 @@
+guard 'gitpusher' do
+  watch(/(.*)/) {|m| `git add -u;git add -A;git commit -m "auto upload by gitpusher";git push` } 
+end

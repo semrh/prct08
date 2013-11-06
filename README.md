@@ -7,6 +7,8 @@ Alumnos:
 
 =================
 
+### Guión de la Práctica ###
+
 Considere el desarrollo de una clase Ruby para representar Matrices. 
  - 1.-) Cree una clase para representar Matrices usando desarrollo dirigido por pruebas (Test Driven Development - TDD) con la herramienta Rspec. 
  - 2.-) Se ha es seguir la metodología de Integración continua (Continuos Integration) usando la herramienta Travis. 

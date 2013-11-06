@@ -122,6 +122,15 @@ class Matriz
 	
 	
 	# Metodo para convertir la matriz en un vector
+	def vectorizar
+		aux = Array.new(0)
+		for i in 0...colum do
+			for j in 0...filas do
+				aux << pos[i][j]
+			end
+		end
+		Array.new(aux)
+	end
 	
 end
 

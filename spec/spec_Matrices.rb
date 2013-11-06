@@ -24,11 +24,11 @@ describe Matriz do
 		it "\n" do
 			@m1.to_s.should eq("1\t2\t\n3\t4\t\n")
 		end
-=begin
+
 		it "Acceso al elemento [0][0]" do
-			@m1.pos[0][0].shoul ed(1)
+			@m1.pos[0][0].should eq(1)
 		end
-=end
+
 	end
 	
 	# Comprobacion de las operaciones de suma y resta de matrices

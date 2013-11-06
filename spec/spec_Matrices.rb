@@ -17,6 +17,18 @@ describe Matriz do
 		it " - Columnas de una matriz 3x3\n" do
 			@m2.ncol.should eq(3)
 		end
+		it "Acceso al elemento [0][0]" do
+			@m1.pos[0][0].should eq(1)
+		end
+		it "Acceso al elemento [0][1]" do
+			@m1.pos[0][1].should eq(2)
+		end
+		it "Acceso al elemento [1][0]" do
+			@m1.pos[1][0].should eq(3)
+		end
+		it "Acceso al elemento [1][1]" do
+			@m1.pos[1][1].should eq(4)
+		end
 	end
 	
 	# Comprobacion de que se convierte bien la matriz a un string
@@ -24,11 +36,6 @@ describe Matriz do
 		it "\n" do
 			@m1.to_s.should eq("1\t2\t\n3\t4\t\n")
 		end
-
-		it "Acceso al elemento [0][0]" do
-			@m1.pos[0][0].should eq(1)
-		end
-
 	end
 	
 	# Comprobacion de las operaciones de suma y resta de matrices

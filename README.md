@@ -19,3 +19,17 @@ Considere el desarrollo de una clase Ruby para representar Matrices.
 
 Para el desarrollo de esta práctica hemos usado las herramientas usadas en las prácticas anteriores (Rspec y Travis) para desarrollar una clase que represente Matrices.
 Comenzamos creando espectativas, en spec_Matrices.rb, de las funciones que luego implementariamos en Matrices.rb.
+ 
+Hemos empleado los siguientes métodos:
+- Metodo initilize de la clase
+- Getter de nfil y ncol
+- Metodo para convertir la matriz a string.
+- Metodo para sumar dos matrices. Sobrecarga del operador "+" para que pueda realizar la suma de matrices.
+- Metodo para restar dos matrices. Sobrecarga del operador "-" para que pueda realizar la resta de matrices.
+- Metodo para multiplicacion dos matrices. Se crea la funcion "por", que multiplica la matriz implícita con la que recibe como parámetro.
+- Metodo para multiplicar una matriz por un escalar. Sobrecarga del operador "*" para que pueda realizar la multiplicación de una matriz por un escalar.
+- Metodo para hallar la traspuesta de una matriz. 
+- Metodo para convertir la matriz en un vector. Permite convertir una matriz, en un vector.
+
+=================
+

@@ -2,8 +2,8 @@ Práctica 8 de LPP
 =================
 
 Alumnos:
-  - José Alexander Delgado Hernández ([alu0100603194@ull.edu.es](mailto:alu0100603194@ull.edu.es))
-  - Sem Ramos Herrera ([alu0100603194@ull.edu.es](mailto:alu0100603194@ull.edu.es))
+  - [José Alexander Delgado Hernández](http://campusvirtual.ull.es/1314/user/view.php?id=5990&course=1102) ([alu0100596403@ull.edu.es](mailto:alu0100596403@ull.edu.es))
+  - [Sem Ramos Herrera](http://campusvirtual.ull.es/1314/user/view.php?id=2455&course=1102) ([alu0100603194@ull.edu.es](mailto:alu0100603194@ull.edu.es))
 
 =================
 

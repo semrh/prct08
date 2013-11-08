@@ -4,6 +4,7 @@
 #   PRACTICA 8      #
 #####################
 
+require "fraccion.rb"
 class Matriz
 	
 	# 

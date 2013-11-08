@@ -77,5 +77,17 @@ describe Matriz do
 			@m2.vectorizar.should eq(@aux)
 		end
 	end
-	
+=begin	
+	# Modificacion de la practica
+	describe "Inicializacion de matriz con fracciones" do
+		it "Comprobamos que se guardan los datos" do
+			@aux = Matriz.new(2,2,[[Fraccion.new(1,2),Fraccion.new(3,2)],[Fraccion.new(5,2),Fraccion.new(1,2)]]
+		end
+		it "Acceso al elemento [0][0]" do
+			@m1.pos[1][0].should eq(3)
+		end
+		it "Comprobamos que realiza bien la traspuesta" do
+		end
+	end
+=end	
 end

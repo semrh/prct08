@@ -1,10 +1,10 @@
 #! /usr/bin/ruby
+require "fraccion.rb"
 
 #####################
 #   PRACTICA 8      #
 #####################
 
-require "fraccion.rb"
 class Matriz
 	
 	# 
@@ -84,6 +84,28 @@ class Matriz
 				fila = Array.new(0)
 				for j in 0...other.ncol do
 					aux = 0
+					for k in 0...ncol do
+						aux += pos[i][k] * other.pos[k][j]
+					end
+					fila << aux
+				end
+				elemento << fila
+			end
+		end
+		Matriz.new(@nfil, other.ncol, elemento)
+	end
+	
+	# Metodo para multiplicacion dos matrices
+	def porf(other)
+		if ((@nfil != other.ncol) || (@ncol != other.nfil))
+			puts "No se pueden multiplicarr las matrices"
+		else
+			elemento = Array.new(0)
+			for i in 0...nfil do
+				fila = Array.new(0)
+				for j in 0...other.ncol do
+					aux = Fraccion.new(1,1)
+					aux = aux - aux
 					for k in 0...ncol do
 						aux += pos[i][k] * other.pos[k][j]
 					end

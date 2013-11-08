@@ -1,4 +1,5 @@
 require "Matrices.rb"
+require "fraccion.rb"
 
 describe Matriz do
 	before :each do
@@ -7,6 +8,11 @@ describe Matriz do
 		@m3 = Matriz.new(2,3,[[3,6,9],[2,8,4]])
 		@m4 = Matriz.new(3,2,[[1,3],[2,4],[6,5]])
 		@m5 = Matriz.new(2,2,[[5,3],[2,3]])
+		@f1 = Fraccion.new(1,2)
+		@f2 = Fraccion.new(3,2)
+		@f3 = Fraccion.new(5,2)
+		@mf1 = Matriz.new(2,2,[[@f1,@f2],[@f3,@f1]])
+		@mf2 = Matriz.new(2,2,[[@f1,@f2],[@f1,@f2]])
 	end
 	
 	# Comprobacion de que se crea bien la matriz
@@ -77,17 +83,33 @@ describe Matriz do
 			@m2.vectorizar.should eq(@aux)
 		end
 	end
-=begin	
+	
 	# Modificacion de la practica
-	describe "Inicializacion de matriz con fracciones" do
-		it "Comprobamos que se guardan los datos" do
-			@aux = Matriz.new(2,2,[[Fraccion.new(1,2),Fraccion.new(3,2)],[Fraccion.new(5,2),Fraccion.new(1,2)]]
-		end
+	describe "Comprobamos que se guardan los datos" do
 		it "Acceso al elemento [0][0]" do
-			@m1.pos[1][0].should eq(3)
-		end
-		it "Comprobamos que realiza bien la traspuesta" do
+			@mf1.pos[0][0].should eq(@f1)
 		end
 	end
-=end	
+	describe "Operaciones con matrices con fracciones" do
+		it "Comprobamos que realiza bien la traspuesta" do
+			@aux = Matriz.new(2,2,[[@f1,@f3],[@f2,@f1]])
+			@mf1.trasponer.to_s.should eq(@aux.to_s)
+		end
+		it "Comprobamos la suma" do
+			@aux = Matriz.new(2,2,[[@f1,@f1],[@f1,@f1]])
+			@af1 = Fraccion.new(1,1)
+			@af2 = Fraccion.new(2,1)
+			@af3 = Fraccion.new(3,1)
+			@aux3 = Matriz.new(2,2,[[@af1,@af2],[@af3,@af1]])
+			@aux2 = @mf1+@aux
+			@aux2.to_s.should eq(@aux3.to_s)
+		end
+		it "Comprobamos la multiplicacion" do
+			@aux = Matriz.new(2,2,[[@f1,@f1],[@f1,@f1]])
+			@aux2 = @aux.porf(@aux)
+			@aux3 = Matriz.new(2,2,[[@f1,@f1],[@f1,@f1]])
+			@aux2.to_s.should eq(@aux3.to_s)
+		end
+	end
+	
 end
